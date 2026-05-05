@@ -1,14 +1,14 @@
 // DFF Top-Level Testbench
 `include "dff_pkg.sv"
 `include "uvm_pkg.sv"
-
+// Well Im the designer want to make the timing to 5ns
 module dff_tb_top ();
   import uvm_pkg::*;
   import dff_pkg::*;
 
   // Clock generation
   logic clk = 1'b0;
-  always #5ns clk = ~clk;
+  always #2.5ns clk = ~clk;
   // Interface instantiation
   dff_if dff_if_inst (clk);
 
