@@ -22,7 +22,26 @@ module dff_tb_top ();
     .data_out  (dff_if_inst.data_out),
     .valid     (dff_if_inst.valid)
   );
+
 // IMPLEMENTING FIX FOR URGENT BUG
+
+// NEW DUT's are being added to the tb to be checked on soc
+  dff dut2 (
+    .clk       (dff_if_inst.clk),
+    .reset     (dff_if_inst.reset),
+    .data_in   (dff_if_inst.data_in),
+    .data_out  (dff_if_inst.data_out),
+    .valid     (dff_if_inst.valid)
+  );
+
+    dff dut3 (
+    .clk       (dff_if_inst.clk),
+    .reset     (dff_if_inst.reset),
+    .data_in   (dff_if_inst.data_in),
+    .data_out  (dff_if_inst.data_out),
+    .valid     (dff_if_inst.valid)
+  );
+
   // Initial block to run simulation
   initial begin
     // Configure virtual interface in UVM config database
