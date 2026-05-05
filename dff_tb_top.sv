@@ -5,9 +5,10 @@
 module dff_tb_top ();
   import uvm_pkg::*;
   import dff_pkg::*;
-
+  
   // Clock generation
   logic clk = 1'b0;
+  logic a1;
   always #2.5ns clk = ~clk;
 >>>>>>> main
   // Interface instantiation
