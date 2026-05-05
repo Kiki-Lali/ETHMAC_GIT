@@ -9,6 +9,7 @@ module dff_tb_top ();
   // Clock generation
   logic clk = 1'b0;
   always #2.5ns clk = ~clk;
+>>>>>>> main
   // Interface instantiation
   dff_if dff_if_inst (clk);
 
